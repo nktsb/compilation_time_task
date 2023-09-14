@@ -26,7 +26,7 @@ static const char month_gloss[MONTH_NUM][3] =
 
 void getCompilationTimeAndDate(TimeDate_t *comp_data)
 {
-	const char *date = __DATE__; //	mmm dd yy
+	const char *date = __DATE__; //	mmm dd yyyy
 	const char *time = __TIME__; //	hh:mm:ss
 
 	//	Get Time
@@ -44,7 +44,7 @@ void getCompilationTimeAndDate(TimeDate_t *comp_data)
 
 	sscanf(date, "%s %d %d", month, &day, &year);
 
-	comp_data->Month = (u8)(strstr((char *)month_gloss, month) - (char *)month_gloss)/3 + 1;
+	comp_data->Month = (u8)((strstr((char *)month_gloss, month) - (char *)month_gloss)/3 + 1);
 	comp_data->Day   = (u8)day;
 	comp_data->Year  = (u16)year;
 }
@@ -74,7 +74,7 @@ void getCompilationTimeAndDate(TimeDate_t *comp_data)
 	comp_data->Day = (u8)atoi(buff);
 
 	memcpy(buff, &date[0], 3); // mmm
-	comp_data->Month = (u8)(strstr((char *)month_gloss, buff) - (char *)month_gloss)/3 + 1;
+	comp_data->Month = (u8)((strstr((char *)month_gloss, buff) - (char *)month_gloss)/3 + 1);
 
 	memcpy(buff, &date[7], 4); // yyyy
 	comp_data->Year = (u16)atoi(buff);

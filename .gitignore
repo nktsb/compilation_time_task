@@ -1,3 +1,6 @@
+#output
+./test_project/compilation_time_task/Output
+
 # Prerequisites
 *.d
 
