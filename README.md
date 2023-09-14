@@ -1,11 +1,10 @@
 # compilation_time_task
-Hello, Whoosh!
 
 Здравствуйте!
 Мое решение задания можно найти в папке answer (compilation_time.c)
 
 Также я сделал небольшой тестовый проект, который шлет в serial дату и время в нужном формате:
-<img width="265" alt="image" src="https://github.com/nktsb/compilation_time_task/assets/55137551/791e8480-946a-4112-9afc-eb4441b148e5">
+<img width="521" alt="image" src="https://github.com/nktsb/compilation_time_task/assets/55137551/6dc79c27-8b75-4b34-8c11-b173fcd2df76">
 
 Тестовый проект собрал в CubeIDE для F103RBT6 (Nucleo).
 
