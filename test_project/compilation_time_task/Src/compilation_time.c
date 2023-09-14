@@ -8,18 +8,18 @@
 
 static const char month_gloss[MONTH_NUM][3] =
 {
-		"Jan",
-		"Feb",
-		"Mar",
-		"Apr",
-		"May",
-		"Jun",
-		"Jul",
-		"Aug",
-		"Sep",
-		"Oct",
-		"Nov",
-		"Dec"
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
+	"May",
+	"Jun",
+	"Jul",
+	"Aug",
+	"Sep",
+	"Oct",
+	"Nov",
+	"Dec"
 };
 
 #ifdef USING_SSCANF
@@ -31,6 +31,7 @@ void getCompilationTimeAndDate(TimeDate_t *comp_data)
 
 	//	Get Time
 	int hour, min, sec = 0;
+
 	sscanf(time, "%d:%d:%d", &hour, &min, &sec);
 
 	comp_data->Hour   = (u8)hour;
@@ -77,7 +78,6 @@ void getCompilationTimeAndDate(TimeDate_t *comp_data)
 
 	memcpy(buff, &date[7], 4); // yyyy
 	comp_data->Year = (u16)atoi(buff);
-
 }
 
 #endif
