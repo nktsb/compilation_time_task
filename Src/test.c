@@ -17,7 +17,7 @@ uint8_t collectTestBuff(TimeDate_t *comp_data, uint8_t *res)
 
 	uint8_t size =
 			sprintf((char *)res,
-					" Build Date/Time: %s %d %d %d:%d:%d\n\r",
+					" Build Date/Time: %s %02d %d %02d:%02d:%02d\n\r",
 					month,
 					(int)comp_data->Day,
 					(int)comp_data->Year,
